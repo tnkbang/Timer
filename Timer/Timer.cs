@@ -15,13 +15,17 @@ namespace Timer
         public Timer()
         {
             InitializeComponent();
+            
             this.StartPosition = FormStartPosition.CenterScreen;
-            notifyIcon1.Icon = new Icon("icon.ico");
+            txtNoiDung.Text = text;
+            dtpSetTimer.CustomFormat = "dd/MM/yyyy hh:mm:ss tt";
+            notifyIcon.Icon = new Icon("icon.ico");
         }
 
         DateTime start;
         System.Timers.Timer t;
         long s;
+        string text = "Đến giờ tắt máy !";
 
         public void CountDown(long seconds, DateTime slt)
         {
@@ -36,11 +40,11 @@ namespace Timer
             if (remainingSeconds <= 0)
             {
                 t.Stop();
-                this.BeginInvoke((Action)(() => toolStripStatusLabel1.Text = "Xong !"));
-                MessageBox.Show("Đến giờ tắt máy !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
+                this.BeginInvoke((Action)(() => lblTimer.Text = "Xong !"));
+                MessageBox.Show(text, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
                 return;
             }
-            this.BeginInvoke((Action)(() => toolStripStatusLabel1.Text = string.Format("{0} giây...", remainingSeconds)));
+            this.BeginInvoke((Action)(() => lblTimer.Text = string.Format("{0} giây...", remainingSeconds)));
         }
 
         private void btnStart_Click(object sender, EventArgs e)
@@ -50,10 +54,12 @@ namespace Timer
                 t.Dispose();
             }
 
+            if (!string.IsNullOrEmpty(txtNoiDung.Text)) text = txtNoiDung.Text;
+
             t = new System.Timers.Timer { Interval = 1000 };
             t.Elapsed += Tick;
             CountDown(10, DateTime.Parse(dtpSetTimer.Value.ToString()));
-            toolStripStatusLabel1.Text = dtpSetTimer.Value.ToString();
+            lblTimer.Text = dtpSetTimer.Value.ToString();
         }
 
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -68,13 +74,13 @@ namespace Timer
             else this.Show();
         }
 
-        private void hiểnThịToolStripMenuItem_Click(object sender, EventArgs e)
+        private void viewToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Show();
             this.WindowState = FormWindowState.Normal;
         }
 
-        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
