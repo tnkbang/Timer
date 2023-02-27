@@ -5,6 +5,28 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Timer", "Timer\Timer.csproj", "{77AB4ABE-DD1C-4D9C-B3F1-0CF17993A3AB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C01E794F-CD64-451A-A82E-55F9D39C49B9}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Release", "Release", "{E2047C53-3EA2-4827-A4D2-FF72CB3C12B5}"
+	ProjectSection(SolutionItems) = preProject
+		Timer\bin\Debug\icon.ico = Timer\bin\Debug\icon.ico
+		Timer\bin\Debug\Timer.exe = Timer\bin\Debug\Timer.exe
+		Timer\bin\Debug\Timer.exe.config = Timer\bin\Debug\Timer.exe.config
+		Timer\bin\Debug\Timer.pdb = Timer\bin\Debug\Timer.pdb
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "demo", "demo", "{7640CB7B-F17B-42C8-91FB-44D03872A8C2}"
+	ProjectSection(SolutionItems) = preProject
+		..\New folder\end.png = ..\New folder\end.png
+		..\New folder\noti.png = ..\New folder\noti.png
+		..\New folder\running.png = ..\New folder\running.png
+		..\New folder\select.png = ..\New folder\select.png
+		..\New folder\t_index.png = ..\New folder\t_index.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

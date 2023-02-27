@@ -66,6 +66,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="dist\lasted\Timer.exe.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -80,6 +81,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="dist\demo\end.png" />
+    <Content Include="dist\demo\noti.png" />
+    <Content Include="dist\demo\running.png" />
+    <Content Include="dist\demo\select.png" />
+    <Content Include="dist\demo\t_index.png" />
+    <Content Include="dist\lasted\icon.ico" />
+    <Content Include="dist\lasted\Timer.exe" />
+    <Content Include="dist\lasted\Timer.pdb" />
     <Content Include="icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
