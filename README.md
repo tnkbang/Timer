@@ -12,7 +12,7 @@ git clone https://github.com/tnkbang/Timer.git
 
 Thêm file icon.ico từ thư mục gốc vào thư mục debug để tránh lỗi.
 
-### Sử dụng
+## Sử dụng
 
 ```
 Vào: /Timer/dist/lasted
